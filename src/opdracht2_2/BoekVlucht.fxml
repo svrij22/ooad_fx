@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="100.0" vgap="100.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdracht2_2.BoekingsController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="600.0" prefWidth="700.0">
+         <children>
+            <ChoiceBox fx:id="cbvp" layoutX="14.0" layoutY="45.0" prefHeight="25.0" prefWidth="208.0" />
+            <Label layoutX="14.0" layoutY="21.0" text="Vertrekpunt" />
+            <Label layoutX="232.0" layoutY="21.0" text="Aankomstpunt" />
+            <ChoiceBox fx:id="cbap" layoutX="232.0" layoutY="45.0" prefWidth="208.0" />
+            <DatePicker fx:id="dpk" layoutX="14.0" layoutY="101.0" prefHeight="25.0" prefWidth="208.0" />
+            <Label layoutX="14.0" layoutY="78.0" text="Datum" />
+            <Label layoutX="232.0" layoutY="78.0" text="Vertrektijd" />
+            <TextField fx:id="vt_h" layoutX="232.0" layoutY="101.0" prefHeight="25.0" prefWidth="95.0" />
+            <TextField fx:id="vt_s" layoutX="345.0" layoutY="101.0" prefHeight="25.0" prefWidth="95.0" />
+            <Separator layoutX="15.0" layoutY="139.0" prefHeight="5.0" prefWidth="678.0" />
+            <TableView fx:id="tab" layoutX="14.0" layoutY="154.0" prefHeight="200.0" prefWidth="678.0">
+              <columns>
+                <TableColumn fx:id="vln" prefWidth="70.0" text="Vlucht nr." />
+                <TableColumn fx:id="vt" prefWidth="253.0" text="Vertrektijd" />
+                  <TableColumn fx:id="at" prefWidth="213.0" text="Aankomsttijd" />
+                  <TableColumn fx:id="duur" prefWidth="112.0" text="Duur" />
+              </columns>
+            </TableView>
+            <Label layoutX="335.0" layoutY="105.0" text=":" />
+            <ImageView fitHeight="113.0" fitWidth="193.0" layoutX="481.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../logo.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="14.0" layoutY="370.0" prefHeight="5.0" prefWidth="678.0" />
+            <TitledPane animated="false" layoutX="17.0" layoutY="380.0" prefHeight="206.0" prefWidth="328.0" text="Klantgegevens">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Voornaam" />
+                        <TextField layoutX="89.0" layoutY="10.0" />
+                        <Label layoutX="14.0" layoutY="47.0" text="Achternaam" />
+                        <TextField layoutX="89.0" layoutY="43.0" />
+                        <Label layoutX="14.0" layoutY="114.0" text="Woonplaats" />
+                        <TextField layoutX="89.0" layoutY="110.0" />
+                        <Label layoutX="14.0" layoutY="82.0" text="Adres" />
+                        <TextField layoutX="89.0" layoutY="78.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="353.0" layoutY="380.0" prefHeight="206.0" prefWidth="328.0" text="Bestelgegevens">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Aantal stoelen" />
+                        <TextField layoutX="102.0" layoutY="10.0" />
+                        <Label layoutX="14.0" layoutY="47.0" text="Reisklasse" />
+                        <ChoiceBox fx:id="reisklasse" layoutX="102.0" layoutY="43.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Button layoutX="15.0" layoutY="141.0" mnemonicParsing="false" text="Bevestig" />
+                        <Button layoutX="251.0" layoutY="141.0" mnemonicParsing="false" text="Annuleer" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
